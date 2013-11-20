@@ -63,31 +63,31 @@ Ext.define('Contatos',{
             allowSingle: false
         }
     }
-})
+});
 
 Ext.onReady(function(){
 
-        var store = Ext.create('Contatos');
+    var store = Ext.create('Contatos');
 
-        var novoTelefone01 = Ext.create('Telefone',{
-        	ddd: '11',
-        	numero: '9 9999-9999'
-        });
+    var novoTelefone01 = Ext.create('Telefone',{
+    	ddd: '11',
+    	numero: '9 9999-9999'
+    });
 
-        var novoTelefone02 = Ext.create('Telefone',{
-        	ddd: '11',
-        	numero: '9 8888-8888'
-        });
+    var novoTelefone02 = Ext.create('Telefone',{
+    	ddd: '11',
+    	numero: '9 8888-8888'
+    });
 
-        var novoContato = Ext.create('Contato',{
-        	nome: 'Loiane',
-        	sobrenome: 'Groner'
-        });
+    var novoContato = Ext.create('Contato',{
+    	nome: 'Loiane',
+    	sobrenome: 'Groner'
+    });
 
-        novoContato.telefones().add(novoTelefone01);
-        novoContato.telefones().add(novoTelefone02);
+    novoContato.telefones().add(novoTelefone01);
+    novoContato.telefones().add(novoTelefone02);
 
-        store.add(novoContato);
+    store.add(novoContato);
 
-        store.sync();
+    store.sync();
 });   
